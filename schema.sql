@@ -1,0 +1,10 @@
+DROP TABLE IF EXISTS summary;
+
+CREATE TABLE summary (
+    SummaryID INTEGER PRIMARY KEY AUTOINCREMENT,
+    Created TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    title TEXT NOT NULL,
+    point1 TEXT,
+    point2 TEXT,
+    point3 TEXT
+);
