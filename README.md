@@ -12,7 +12,9 @@ This web application was developed as the final assignment for MGMT4620: Web Des
 
 **NOTE:** Usage may differ depending on the version of Python installed and prefered running method. This guide uses Python 3 and commands are run in the MacOS command line interface (CLI).
 
-**1. Clone or download the project files from https://github.com/averysully/Summarize-Notes.**
+**1. Clone or download the project files from:** 
+
+https://github.com/averysully/Summarize-Notes
 
 **2. Ensure your environment is configured with the required libraries.**
 ```
