@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+  <title>Meeting Notes Summarizer</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
+</head>
+
+<body>
+  <h3>Meeting Notes Summarizer</h3>
+  <form action="/" method="post">
+    <label for="title">Meeting Title:</label><br>
+    <input type="text" id="title" name="title" placeholder="Enter a title for this meeting." required /><br>
+    <label for="notes">Meeting Notes:</label><br>
+    <textarea name="notes" placeholder="Paste your meeting notes here." required></textarea>
+    <input type="submit" value="Submit" />
+  </form>
+  <h3>Summary:</h3>
+  {% if result %}
+  <div class="result">{{ result }}</div>
+  {% else %}
+  <p>Your summary will appear here after submission.</p>
+  {% endif %}
+
+  <h3>Search Past Summaries</h3>
+  <form action="/" method="post">
+    <input type="text" name="search_title" placeholder="Enter a meeting title to search." required /><br>
+    <input type="submit" value="Search" />
+  </form>
+  {% if summary %}
+  <div class="result">
+    {{ summary['point1'] }}<br>
+    {{ summary['point2'] }}<br>
+    {{ summary['point3'] }}
+  </div>
+  {% elif not_found %}
+  <p>No summary found for that title.</p>
+  {% else %}
+  <p>Search results will appear here.</p>
+  {% endif %}
+</body>
